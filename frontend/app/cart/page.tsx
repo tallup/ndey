@@ -52,11 +52,10 @@ export default function CartPage() {
                 <Link href={`/products/${item.product.slug}`} className="flex-shrink-0">
                   <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100">
                     {item.product.image ? (
-                      <Image
-                        src={`http://localhost:8000/storage/${item.product.image}`}
+                      <img
+                        src={item.product.image.startsWith('http') ? item.product.image : `http://localhost:8000/storage${item.product.image.startsWith('/') ? item.product.image : '/' + item.product.image}`}
                         alt={item.product.name}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">

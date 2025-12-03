@@ -64,6 +64,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => '/products/bowl-transparent-small.png',
                 ],
                 [
                     'name' => 'Transparent Plastic Bowl - Medium',
@@ -77,6 +78,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => '/products/bowl-transparent-medium.png',
                 ],
                 [
                     'name' => 'Transparent Plastic Bowl - Large',
@@ -90,6 +92,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => '/products/bowl-transparent-large.png',
                 ],
                 [
                     'name' => 'White Plastic Bowl - Small',
@@ -103,6 +106,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => '/products/bowl-white-small.png',
                 ],
                 [
                     'name' => 'White Plastic Bowl - Medium',
@@ -116,6 +120,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => '/products/bowl-white-medium.png',
                 ],
                 [
                     'name' => 'White Plastic Bowl - Large',
@@ -129,6 +134,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => '/products/bowl-white-large.png',
                 ],
                 [
                     'name' => 'Colorful Plastic Bowl Set - Small',
@@ -142,6 +148,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
+                    'image' => '/products/bowl-colorful-small.png',
                 ],
                 [
                     'name' => 'Colorful Plastic Bowl Set - Medium',
@@ -155,6 +162,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
+                    'image' => '/products/bowl-colorful-medium.png',
                 ],
                 [
                     'name' => 'Premium Plastic Bowl - Medium',
@@ -168,6 +176,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
+                    'image' => '/products/bowl-premium-medium.png',
                 ],
                 [
                     'name' => 'Premium Plastic Bowl - Large',
@@ -181,6 +190,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Bowl+Large',
                 ],
             ];
 
@@ -208,6 +218,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Cup+Small',
                 ],
                 [
                     'name' => 'Transparent Plastic Cup - Medium',
@@ -221,6 +232,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Cup+Medium',
                 ],
                 [
                     'name' => 'Transparent Plastic Cup - Large',
@@ -234,6 +246,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Cup+Large',
                 ],
                 [
                     'name' => 'White Plastic Cup - Small',
@@ -247,6 +260,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Cup+Small',
                 ],
                 [
                     'name' => 'White Plastic Cup - Medium',
@@ -260,6 +274,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Cup+Medium',
                 ],
                 [
                     'name' => 'White Plastic Cup - Large',
@@ -273,6 +288,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Cup+Large',
                 ],
                 [
                     'name' => 'Colorful Plastic Cup Set - Medium',
@@ -286,6 +302,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colorful+Cup+Medium',
                 ],
                 [
                     'name' => 'Colorful Plastic Cup Set - Large',
@@ -299,6 +316,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
+                    'image' => 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=Colorful+Cup+Large',
                 ],
                 [
                     'name' => 'Premium Plastic Cup - Medium',
@@ -312,6 +330,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Cup+Medium',
                 ],
                 [
                     'name' => 'Premium Plastic Cup - Large',
@@ -325,6 +344,7 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Cup+Large',
                 ],
             ];
 
@@ -352,7 +372,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Spoon+Small',],
                 [
                     'name' => 'Transparent Plastic Spoon - Medium',
                     'slug' => 'transparent-plastic-spoon-medium',
@@ -365,7 +386,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Spoon+Medium',],
                 [
                     'name' => 'Transparent Plastic Spoon - Large',
                     'slug' => 'transparent-plastic-spoon-large',
@@ -378,7 +400,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Spoon+Large',],
                 [
                     'name' => 'White Plastic Spoon - Small',
                     'slug' => 'white-plastic-spoon-small',
@@ -391,7 +414,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Spoon+Small',],
                 [
                     'name' => 'White Plastic Spoon - Medium',
                     'slug' => 'white-plastic-spoon-medium',
@@ -404,7 +428,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Spoon+Medium',],
                 [
                     'name' => 'White Plastic Spoon - Large',
                     'slug' => 'white-plastic-spoon-large',
@@ -417,7 +442,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Spoon+Large',],
                 [
                     'name' => 'Colorful Plastic Spoon Set - Medium',
                     'slug' => 'colorful-plastic-spoon-medium',
@@ -430,7 +456,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colorful+Spoon',],
                 [
                     'name' => 'Colorful Plastic Spoon Set - Large',
                     'slug' => 'colorful-plastic-spoon-large',
@@ -443,7 +470,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=Colorful+Spoon+Large',],
                 [
                     'name' => 'Premium Plastic Spoon - Medium',
                     'slug' => 'premium-plastic-spoon-medium',
@@ -456,7 +484,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Spoon',],
                 [
                     'name' => 'Premium Plastic Spoon - Large',
                     'slug' => 'premium-plastic-spoon-large',
@@ -469,7 +498,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Spoon+Large',],
             ];
 
             foreach ($spoonProducts as $product) {
@@ -496,7 +526,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Plate+Small',],
                 [
                     'name' => 'Transparent Plastic Plate - Medium',
                     'slug' => 'transparent-plastic-plate-medium',
@@ -509,7 +540,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Plate+Medium',],
                 [
                     'name' => 'Transparent Plastic Plate - Large',
                     'slug' => 'transparent-plastic-plate-large',
@@ -522,7 +554,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Plate+Large',],
                 [
                     'name' => 'White Plastic Plate - Small',
                     'slug' => 'white-plastic-plate-small',
@@ -535,7 +568,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Plate+Small',],
                 [
                     'name' => 'White Plastic Plate - Medium',
                     'slug' => 'white-plastic-plate-medium',
@@ -548,7 +582,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Plate+Medium',],
                 [
                     'name' => 'White Plastic Plate - Large',
                     'slug' => 'white-plastic-plate-large',
@@ -561,7 +596,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Plate+Large',],
                 [
                     'name' => 'Colorful Plastic Plate Set - Medium',
                     'slug' => 'colorful-plastic-plate-medium',
@@ -574,7 +610,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colorful+Plate',],
                 [
                     'name' => 'Colorful Plastic Plate Set - Large',
                     'slug' => 'colorful-plastic-plate-large',
@@ -587,7 +624,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=Colorful+Plate+Large',],
                 [
                     'name' => 'Premium Plastic Plate - Medium',
                     'slug' => 'premium-plastic-plate-medium',
@@ -600,7 +638,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Plate',],
                 [
                     'name' => 'Premium Plastic Plate - Large',
                     'slug' => 'premium-plastic-plate-large',
@@ -613,7 +652,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Plate+Large',],
             ];
 
             foreach ($plateProducts as $product) {
@@ -640,7 +680,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Lunch+Bowl+Small',],
                 [
                     'name' => 'Transparent Plastic Lunch Bowl - Medium',
                     'slug' => 'transparent-plastic-lunch-bowl-medium',
@@ -653,7 +694,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Lunch+Bowl+Medium',],
                 [
                     'name' => 'Transparent Plastic Lunch Bowl - Large',
                     'slug' => 'transparent-plastic-lunch-bowl-large',
@@ -666,7 +708,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Transparent Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Lunch+Bowl+Large',],
                 [
                     'name' => 'White Plastic Lunch Bowl - Small',
                     'slug' => 'white-plastic-lunch-bowl-small',
@@ -679,7 +722,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Lunch+Bowl',],
                 [
                     'name' => 'White Plastic Lunch Bowl - Medium',
                     'slug' => 'white-plastic-lunch-bowl-medium',
@@ -692,7 +736,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Lunch+Bowl+M',],
                 [
                     'name' => 'White Plastic Lunch Bowl - Large',
                     'slug' => 'white-plastic-lunch-bowl-large',
@@ -705,7 +750,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Lunch+Bowl+L',],
                 [
                     'name' => 'Colorful Plastic Lunch Bowl Set - Medium',
                     'slug' => 'colorful-plastic-lunch-bowl-medium',
@@ -718,7 +764,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colorful+Lunch+Bowl',],
                 [
                     'name' => 'Colorful Plastic Lunch Bowl Set - Large',
                     'slug' => 'colorful-plastic-lunch-bowl-large',
@@ -731,7 +778,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=Colorful+Lunch+Bowl+L',],
                 [
                     'name' => 'Premium Plastic Lunch Bowl - Medium',
                     'slug' => 'premium-plastic-lunch-bowl-medium',
@@ -744,7 +792,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Lunch+Bowl',],
                 [
                     'name' => 'Premium Plastic Lunch Bowl - Large',
                     'slug' => 'premium-plastic-lunch-bowl-large',
@@ -757,7 +806,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Lunch+Bowl+L',],
             ];
 
             foreach ($lunchBowlProducts as $product) {
@@ -785,7 +835,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '250ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Bottle+250ml',],
                 [
                     'name' => 'Plastic Water Bottle - 350ml',
                     'slug' => 'plastic-water-bottle-350ml',
@@ -799,7 +850,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '350ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Bottle+350ml',],
                 [
                     'name' => 'Plastic Water Bottle - 500ml',
                     'slug' => 'plastic-water-bottle-500ml',
@@ -813,7 +865,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '500ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Bottle+500ml',],
                 [
                     'name' => 'Plastic Water Bottle - 750ml',
                     'slug' => 'plastic-water-bottle-750ml',
@@ -827,7 +880,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '750ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Bottle+750ml',],
                 [
                     'name' => 'Plastic Water Bottle - 1L',
                     'slug' => 'plastic-water-bottle-1l',
@@ -841,7 +895,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '1L',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Bottle+1L',],
                 [
                     'name' => 'Colored Plastic Water Bottle - 500ml',
                     'slug' => 'colored-plastic-water-bottle-500ml',
@@ -855,7 +910,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '500ml',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colored+Bottle+500ml',],
                 [
                     'name' => 'Premium Plastic Water Bottle - 500ml',
                     'slug' => 'premium-plastic-water-bottle-500ml',
@@ -869,7 +925,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '500ml',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/5DADE2/FFFFFF?text=Premium+Bottle+500ml',],
                 [
                     'name' => 'Premium Plastic Water Bottle - 750ml',
                     'slug' => 'premium-plastic-water-bottle-750ml',
@@ -883,7 +940,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '750ml',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/5DADE2/FFFFFF?text=Premium+Bottle+750ml',],
                 [
                     'name' => 'Sports Plastic Water Bottle - 500ml',
                     'slug' => 'sports-plastic-water-bottle-500ml',
@@ -897,7 +955,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '500ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/27AE60/FFFFFF?text=Sports+Bottle+500ml',],
                 [
                     'name' => 'Sports Plastic Water Bottle - 750ml',
                     'slug' => 'sports-plastic-water-bottle-750ml',
@@ -911,7 +970,8 @@ class DatabaseSeeder extends Seeder
                     'capacity' => '750ml',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/27AE60/FFFFFF?text=Sports+Bottle+750ml',],
             ];
 
             foreach ($bottleProducts as $product) {
@@ -938,7 +998,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Gift+Bag+Small',],
                 [
                     'name' => 'Medium Gift Bag - Clear',
                     'slug' => 'medium-gift-bag-clear',
@@ -951,7 +1012,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Gift+Bag+Medium',],
                 [
                     'name' => 'Large Gift Bag - Clear',
                     'slug' => 'large-gift-bag-clear',
@@ -964,7 +1026,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Gift+Bag+Large',],
                 [
                     'name' => 'Small Gift Bag - White',
                     'slug' => 'small-gift-bag-white',
@@ -977,7 +1040,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'small',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Gift+Bag+S',],
                 [
                     'name' => 'Medium Gift Bag - White',
                     'slug' => 'medium-gift-bag-white',
@@ -990,7 +1054,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Gift+Bag+M',],
                 [
                     'name' => 'Large Gift Bag - White',
                     'slug' => 'large-gift-bag-white',
@@ -1003,7 +1068,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'White',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FFFFFF/CCCCCC?text=White+Gift+Bag+L',],
                 [
                     'name' => 'Colorful Gift Bag Set - Medium',
                     'slug' => 'colorful-gift-bag-medium',
@@ -1016,7 +1082,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/FF6B6B/FFFFFF?text=Colorful+Gift+Bag',],
                 [
                     'name' => 'Colorful Gift Bag Set - Large',
                     'slug' => 'colorful-gift-bag-large',
@@ -1029,7 +1096,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Plastic',
                     'color' => 'Assorted',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/4ECDC4/FFFFFF?text=Colorful+Gift+Bag+L',],
                 [
                     'name' => 'Premium Gift Bag - Medium',
                     'slug' => 'premium-gift-bag-medium',
@@ -1042,7 +1110,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'medium',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Gift+Bag',],
                 [
                     'name' => 'Premium Gift Bag - Large',
                     'slug' => 'premium-gift-bag-large',
@@ -1055,7 +1124,8 @@ class DatabaseSeeder extends Seeder
                     'size' => 'large',
                     'material' => 'Premium Plastic',
                     'color' => 'Clear',
-                ],
+                
+                    'image' => 'https://via.placeholder.com/400x400/E8F4F8/666666?text=Premium+Gift+Bag+L',],
             ];
 
             foreach ($giftBagProducts as $product) {

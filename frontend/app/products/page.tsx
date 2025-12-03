@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import ProductGrid from "@/components/ProductGrid";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { api } from "@/lib/api";
 import { Category } from "@/types/product";
 
 export default function ProductsPage() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const search = searchParams.get("search");
   const categoryParam = searchParams.get("category");
 
@@ -15,6 +18,8 @@ export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam);
   const [sortBy, setSortBy] = useState<string>("created_at");
   const [sortOrder, setSortOrder] = useState<string>("desc");
+
+  const selectedCategoryData = categories.find(cat => cat.slug === selectedCategory);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -35,12 +40,31 @@ export default function ProductsPage() {
     }
   }, [categoryParam]);
 
+  const handleCategoryChange = (categorySlug: string | null) => {
+    setSelectedCategory(categorySlug);
+    if (categorySlug) {
+      router.push(`/products?category=${categorySlug}`);
+    } else {
+      router.push('/products');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Header />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold tracking-tight mb-2">All Products</h1>
-          <p className="text-gray-600">Browse our complete collection</p>
+          <h1 className="text-4xl font-bold tracking-tight mb-2">
+            {selectedCategoryData ? selectedCategoryData.name : search ? `Search Results` : 'All Products'}
+          </h1>
+          <p className="text-gray-600">
+            {selectedCategoryData 
+              ? selectedCategoryData.description || `Browse our ${selectedCategoryData.name.toLowerCase()} collection`
+              : search 
+                ? `Search results for "${search}"`
+                : 'Browse our complete collection'}
+          </p>
         </div>
 
         {/* Filters */}
@@ -48,7 +72,7 @@ export default function ProductsPage() {
           {/* Category Filter */}
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => setSelectedCategory(null)}
+              onClick={() => handleCategoryChange(null)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 !selectedCategory
                   ? "bg-black text-white"
@@ -60,7 +84,7 @@ export default function ProductsPage() {
             {categories.map((category) => (
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.slug)}
+                onClick={() => handleCategoryChange(category.slug)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   selectedCategory === category.slug
                     ? "bg-black text-white"
@@ -111,6 +135,8 @@ export default function ProductsPage() {
           sortOrder={sortOrder}
         />
       </div>
+      
+      <Footer />
     </div>
   );
 }

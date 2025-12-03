@@ -5,11 +5,12 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShoppingCart, Heart, ArrowLeft, Minus, Plus, MessageCircle } from "lucide-react";
+import { ShoppingCart, Heart, ArrowLeft, Minus, Plus, MessageCircle, Package } from "lucide-react";
 import { Product } from "@/types/product";
 import { api } from "@/lib/api";
 import { useCartStore } from "@/store/cartStore";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -18,6 +19,8 @@ export default function ProductDetailPage() {
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
+  const [loadingSimilar, setLoadingSimilar] = useState(false);
   
   const { addItem } = useCartStore();
 
@@ -40,6 +43,35 @@ export default function ProductDetailPage() {
       fetchProduct();
     }
   }, [slug]);
+
+  useEffect(() => {
+    const fetchSimilarProducts = async () => {
+      if (!product?.category?.slug) return;
+      
+      try {
+        setLoadingSimilar(true);
+        const response = await api.get("/products", {
+          params: {
+            category: product.category.slug,
+            per_page: 8,
+          },
+        });
+        const productsData = response.data.data || response.data;
+        const products = Array.isArray(productsData) ? productsData : [];
+        // Filter out the current product
+        const filtered = products.filter((p: Product) => p.id !== product.id).slice(0, 4);
+        setSimilarProducts(filtered);
+      } catch (error) {
+        console.error("Error fetching similar products:", error);
+      } finally {
+        setLoadingSimilar(false);
+      }
+    };
+
+    if (product) {
+      fetchSimilarProducts();
+    }
+  }, [product]);
 
   const handleAddToCart = () => {
     if (product) {
@@ -128,11 +160,10 @@ export default function ProductDetailPage() {
           <div>
             <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 mb-4">
               {images.length > 0 ? (
-                <Image
-                  src={`http://localhost:8000/storage/${images[selectedImage]}`}
+                <img
+                  src={images[selectedImage].startsWith('http') ? images[selectedImage] : `http://localhost:8000/storage${images[selectedImage].startsWith('/') ? images[selectedImage] : '/' + images[selectedImage]}`}
                   alt={product.name}
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-400">
@@ -153,11 +184,10 @@ export default function ProductDetailPage() {
                         : "border-transparent hover:border-gray-300"
                     }`}
                   >
-                    <Image
-                      src={`http://localhost:8000/storage/${img}`}
+                    <img
+                      src={img.startsWith('http') ? img : `http://localhost:8000/storage${img.startsWith('/') ? img : '/' + img}`}
                       alt={`${product.name} ${index + 1}`}
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </button>
                 ))}
@@ -309,7 +339,93 @@ export default function ProductDetailPage() {
             </motion.div>
           </div>
         </div>
+
+        {/* Similar Products Section */}
+        {similarProducts.length > 0 && (
+          <section className="mt-16 pt-16 border-t">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-2">
+                Similar <span className="gradient-text">Products</span>
+              </h2>
+              <p className="text-gray-600">You might also like these products</p>
+            </div>
+
+            {loadingSimilar ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="animate-pulse">
+                    <div className="bg-gray-200 aspect-square rounded-lg mb-4" />
+                    <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
+                    <div className="h-4 bg-gray-200 rounded w-1/2" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {similarProducts.map((similarProduct, index) => (
+                  <motion.div
+                    key={similarProduct.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative"
+                  >
+                    <Link href={`/products/${similarProduct.slug}`}>
+                      <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 mb-4">
+                        {similarProduct.image ? (
+                          <img
+                            src={similarProduct.image.startsWith('http') 
+                              ? similarProduct.image 
+                              : `http://localhost:8000/storage${similarProduct.image.startsWith('/') ? similarProduct.image : '/' + similarProduct.image}`}
+                            alt={similarProduct.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-gray-400 bg-gradient-to-br from-gray-100 to-gray-200">
+                            <Package className="w-16 h-16" />
+                          </div>
+                        )}
+
+                        {similarProduct.discount_percentage && (
+                          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-semibold">
+                            -{similarProduct.discount_percentage}%
+                          </div>
+                        )}
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold mb-1 group-hover:text-gray-600 transition-colors line-clamp-2">
+                          {similarProduct.name}
+                        </h3>
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-lg font-bold">D{similarProduct.price}</span>
+                          {similarProduct.compare_price && (
+                            <span className="text-sm text-gray-500 line-through">
+                              D{similarProduct.compare_price}
+                            </span>
+                          )}
+                        </div>
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            addItem(similarProduct, 1);
+                          }}
+                          className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+                        >
+                          <ShoppingCart className="h-4 w-4" />
+                          Add to Cart
+                        </button>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
       </div>
+      <Footer />
     </div>
   );
 }
